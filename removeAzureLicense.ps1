@@ -1,6 +1,6 @@
 function removeAzureLicense {
     [cmdletbinding()]
-    param ([string[]]$Users, [string]$skuid, [bool]$force = $false)
+    param ([string[]]$Users, [string]$skuid)
 
     foreach ($User In $Users) {
 
@@ -27,7 +27,5 @@ function removeAzureLicense {
         catch {
             Write-Debug ("User " + $user + " not found")
         }
-
     }
-
 }
